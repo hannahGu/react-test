@@ -1,0 +1,31 @@
+{
+  "name": "react-kitter",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack --watch",
+    "serve": "node server.js"
+  },
+  "author": "hannah",
+  "license": "ISC",
+  "dependencies": {
+    "@types/react": "^16.4.6",
+    "@types/react-dom": "^16.0.6",
+    "@types/react-router-dom": "^4.2.7",
+    "express": "^4.16.3",
+    "object-assign": "^4.1.1",
+    "path": "^0.12.7",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
+    "react-router-dom": "^4.3.1",
+    "ts-loader": "^4.4.2"
+  },
+  "devDependencies": {
+    "typescript": "^2.9.2",
+    "webpack": "^4.16.0",
+    "webpack-cli": "^3.0.8"
+  },
+  "keywords": [],
+  "description": ""
+}
