@@ -8,9 +8,13 @@ const mapDispatchToProps = (dispatch:Dispatch) => ({
 })
 
 const AddTodo = ({addTodo}:any) => {
+    console.log('60',addTodo);
     return (
       <div>
-        <form onSubmit={(e:any)=>addTodo(e.target.children[0]['value'])}>
+        <form onSubmit={(e:any)=>{
+          addTodo(e.target.children[0]['value']);
+          e.target.children[0]['value'] = '';
+        }}>
           <input />
           <button type="submit">
             Add Todoxs9
