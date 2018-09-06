@@ -1,15 +1,17 @@
 import {makes } from '../actions/count';
-const count = (state={name:'123'},action:any)=>{
+const count1 = (state='123',action:any)=>{
     if(action.type === 'MAKE'){
-        return (dispatch:Function)=>{
-          return fetchData().then(
-              (res:any)=>{console.log('res',res);return dispatch(makes(res));
+        // return '1234';
+         return (dispatch:Function)=>{
+          return fetchData().then(res=>res.json()).then(
+              (res:any)=>{console.log('res',res);return dispatch(makes(res.count));
               }).catch((error:any)=>{
                   console.error(error);
               });
-          }
+           }
     }else if(action.type === 'MAKESUCCESS'){
-        return {...state,name:action.name};
+        console.log('action ',action);
+        return '12345';
     }else{
         return state;
     }
@@ -36,5 +38,5 @@ function fetchData(){
 //       }
 //     }
 
-export default count;
+export default count1;
 
