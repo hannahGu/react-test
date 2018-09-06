@@ -19,7 +19,9 @@ const count1 = (state='123',action:any)=>{
 }
 
 function fetchData(){
-    return fetch('http://localhost:8083');
+    return  new Promise(function(resolve, reject) {
+        setTimeout(resolve, 100, 'foo');
+      });
 }
 
 
